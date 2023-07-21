@@ -1,9 +1,9 @@
 import React from "react";
 import Login from '../assets/IMG/Login.jpg'; 
-import AnimatedText from "../Components/AnimatedText";
 import AnimatedIcons from "../Components/AnimatedIcons";
-import TopAnimated from "../Components/TopAnimated";
 import { useSpring, animated } from 'react-spring';
+import Letras from "../Components/Letras";
+
 
 const style = {
     backgroundImage: `url(${Login})`,
@@ -29,34 +29,6 @@ const iconContainerStyle = {
     flexDirection: "column",
     alignItems: "center",
 };
-
-const bienvenidosStyle = {
-    position: "absolute",
-    top: "45%",
-    left: "10%",
-    transform: "translate(-50%, -50%)",
-    textAlign: "center",
-    
-};
-
-const bienvenidos2Style = {
-    position: "absolute",
-    top: "46%",
-    left: "24.5%",
-    transform: "translate(-50%, -50%)",
-    textAlign: "center",
-    
-};
-
-const bienvenidos3Style = {
-    position: "absolute",
-    top: "55%",
-    left: "12%",
-    transform: "translate(-50%, -50%)",
-    textAlign: "center",
-    
-};
-
 
 
 // estilos textos e iconos
@@ -87,21 +59,9 @@ class Start extends React.Component {
                     <AnimatedIcons />
                 </div>
 
-                <div className="Nombre">
-
-                    <div className="Bienvenidos" style={bienvenidosStyle}>
-                        <AnimatedText text='Andrés' />
-                    </div>
-                    <div className="Bienvenidos2" style={bienvenidos2Style}>
-                        <AnimatedTextWithDelay text='Gómez Tagle Azcárraga' delay={1000} />
-                    </div>
-                    <div className="Bienvenidos2" style={bienvenidos3Style}>
-                        <AnimatedTextWithDelay text='Software Developer' delay={2300} />
-                    </div> 
-
-                    
-
-            </div>
+                <div className="Nombre" style={{marginTop:'20%', marginRight:'60%'}}>
+                    <Letras/>
+                </div>
         </div>
         );
     }
