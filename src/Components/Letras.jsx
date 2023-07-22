@@ -32,6 +32,7 @@ const Trail = ({ open, children }) => {
             <span>Andrés</span>
             <span>Gómez Tagle Azcárraga</span>
             <span style={{fontSize:'2rem'}}>Software Developer</span>
+            <span>esto es una prueba</span>
         </Trail>
         </div>
     );
