@@ -11,7 +11,7 @@ const Trail = ({ open, children }) => {
         height: open ? 110 : 0,
         from: { opacity: 0, x: 20, height: 0 },
     });
-    
+
     return (
         <div>
         {trail.map(({ height, ...style }, index) => (
@@ -29,10 +29,9 @@ const Trail = ({ open, children }) => {
     return (
         <div className={styles.container} onClick={() => set((state) => !state)}>
         <Trail open={open}>
-            <span>Andrés</span>
-            <span>Gómez Tagle Azcárraga</span>
-            <span style={{fontSize:'2rem'}}>Software Developer</span>
-            
+            <span style={{ fontSize: '3rem', marginLeft:'33%'}}>Andrés</span>
+            <span style={{ fontSize: '2.5rem' }}>Gómez  Tagle  Azcárraga</span>
+            <span style={{ fontSize: '2rem', marginLeft:'19%',}}>Software Developer</span>
         </Trail>
         </div>
     );

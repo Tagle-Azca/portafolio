@@ -1,22 +1,8 @@
 import React from "react";
-import Login from '../assets/IMG/Login.jpg'; 
 import AnimatedIcons from "../Components/AnimatedIcons";
 import Letras from "../Components/Letras";
+import Background from '../Components/AnimatedBack';
 
-
-const style = {
-    backgroundImage: `url(${Login})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    width: "100vw",
-    height: "100vh",
-    position: "fixed",
-    top: 0,
-    left: 0,
-    zIndex: -1,
-};
-
-// estilos textos e iconos
 
 const iconContainerStyle = {
     position: "absolute",
@@ -29,25 +15,27 @@ const iconContainerStyle = {
     alignItems: "center",
 };
 
-
-// estilos textos e iconos
-
-
+// Estilos para el contenedor del componente Letras
+const letrasContainerStyle = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center", 
+    height: "100%", 
+};
 
 class Start extends React.Component {
     render() {
         return (
-        <div className="Pagina" style={style}>
-
+            <div>
+                <Background />
                 <div className="Iconos" style={iconContainerStyle}>
                     <AnimatedIcons />
                 </div>
-
-                <div className="Nombre" style={{marginTop:'20%', marginRight:'60%'}}>
-                    <Letras/>
+                <div className="Nombre" style={{ marginTop: '20%', ...letrasContainerStyle }}>
+                    <Letras />
                 </div>
-            
-        </div>
+            </div>
         );
     }
 }
