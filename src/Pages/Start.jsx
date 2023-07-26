@@ -39,6 +39,9 @@ class Start extends React.Component {
                     <div className="Arrow" style={{marginTop:'15%'}}>
                     <ArrowDown/>
                     </div>
+                    <div style={{marginTop:'80%'}}>
+                        
+                    </div>
             </div>
         );
     }
