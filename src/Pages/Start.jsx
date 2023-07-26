@@ -2,7 +2,7 @@ import React from "react";
 import AnimatedIcons from "../Components/AnimatedIcons";
 import Letras from "../Components/Letras";
 import Background from '../Components/AnimatedBack';
-
+import ArrowDown from '../Components/ArrowDown'
 const iconContainerStyle = {
     position: "absolute",
     top: "1%",
@@ -34,6 +34,10 @@ class Start extends React.Component {
 
                     <div className="Nombre" style={{ marginTop: '20%', ...letrasContainerStyle }}>
                         <Letras />
+                    </div>
+
+                    <div className="Arrow" style={{marginTop:'15%'}}>
+                    <ArrowDown/>
                     </div>
             </div>
         );

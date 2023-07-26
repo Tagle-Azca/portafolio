@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useTrail, a } from '@react-spring/web';
-import styles from '../assets/CSS/styles.module.css';
+import styles from '../CSS/styles.module.css';
 
 const Trail = ({ open, children }) => {
     const items = React.Children.toArray(children);

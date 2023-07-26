@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/CSS/AnimatedBack.css'; // Asegúrate de que la ruta sea correcta según la ubicación del archivo CSS.
+import '../CSS/AnimatedBack.css'; // Asegúrate de que la ruta sea correcta según la ubicación del archivo CSS.
 
 const Background = () => {
   return (

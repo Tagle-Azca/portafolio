@@ -1,0 +1,14 @@
+/* Arrow.css */
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Controla aquí la altura de salto de la flecha */
+    }
+  }
+  
+  .bouncing-arrow {
+    animation: bounce 2s infinite; /* Controla aquí la velocidad de la animación */
+  }
+  
