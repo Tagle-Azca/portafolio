@@ -3,15 +3,14 @@ import AnimatedIcons from "../Components/AnimatedIcons";
 import Letras from "../Components/Letras";
 import Background from '../Components/AnimatedBack';
 
-
 const iconContainerStyle = {
     position: "absolute",
-    top: "50%",
-    right: "1vw",
+    top: "1%",
+    right: "41%",
     fontSize: "2vw",
-    transform: "translateY(-50%)",
+    transform: "translateX(-50%)",
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "row",
     alignItems: "center",
 };
 
@@ -32,9 +31,10 @@ class Start extends React.Component {
                 <div className="Iconos" style={iconContainerStyle}>
                     <AnimatedIcons />
                 </div>
-                <div className="Nombre" style={{ marginTop: '20%', ...letrasContainerStyle }}>
-                    <Letras />
-                </div>
+
+                    <div className="Nombre" style={{ marginTop: '20%', ...letrasContainerStyle }}>
+                        <Letras />
+                    </div>
             </div>
         );
     }
