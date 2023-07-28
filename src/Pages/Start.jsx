@@ -4,12 +4,23 @@ import Letras from "../Components/Letras";
 import Background from '../Components/AnimatedBack';
 import ArrowDown from '../Components/ArrowDown'
 import Cards from '../Components/Cards'
+import SpeedDial from '../Components/SpeedDial'
 
 const iconContainerStyle = {
     position: "absolute",
     top: "1%",
     right: "41%",
     fontSize: "2vw",
+    transform: "translateX(-50%)",
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+};
+const Dial = {
+    position: "absolute",
+    top: "1%",
+    right: "5%",
+    
     transform: "translateX(-50%)",
     display: "flex",
     flexDirection: "row",
@@ -32,10 +43,14 @@ const mainContainerStyle = {
 class Start extends React.Component {
     render() {
         return (
-            <div style={mainContainerStyle}>
+            <main style={mainContainerStyle}>
                 <Background />
                 <div className="Iconos" style={iconContainerStyle}>
                     <AnimatedIcons />
+                </div>
+
+                <div className="Dial" style={Dial}>
+                    <SpeedDial/>
                 </div>
 
                 <div className="Nombre" style={{ ...letrasContainerStyle, marginTop: '20%' }}>
@@ -51,9 +66,10 @@ class Start extends React.Component {
                         <Cards />
                     </div>
                 </div>
+                
 
                 {/* Aquí puedes agregar más secciones con contenido e importaciones */}
-            </div>
+            </main>
         );
     }
 }
