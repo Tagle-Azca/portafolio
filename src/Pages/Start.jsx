@@ -19,8 +19,7 @@ const iconContainerStyle = {
 const Dial = {
     position: "absolute",
     top: "1%",
-    right: "5%",
-    
+    right: "1%",
     transform: "translateX(-50%)",
     display: "flex",
     flexDirection: "row",
