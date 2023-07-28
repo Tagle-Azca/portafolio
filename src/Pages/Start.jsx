@@ -45,8 +45,10 @@ class Start extends React.Component {
                     <ArrowDown />
                 </div>
 
-                <div className="CardsSection" style={{ marginTop: '45vh', marginLeft:'40vh' }}>
-                    <Cards />
+                <div className="CardsSection" style={{ marginTop: '45vh', marginLeft: '10%', position: 'relative' }}>
+                    <div style={{ position: 'absolute', left: 0, right: 0, margin: '0 auto' }}>
+                        <Cards />
+                    </div>
                 </div>
 
                 {/* Aquí puedes agregar más secciones con contenido e importaciones */}
