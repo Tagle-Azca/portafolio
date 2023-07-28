@@ -28,6 +28,7 @@ const mainContainerStyle = {
     minHeight: "180vh", // Altura mínima del 100% del viewport
 };
 
+
 class Start extends React.Component {
     render() {
         return (

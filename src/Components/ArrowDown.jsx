@@ -12,10 +12,10 @@ const Arrow = () => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <div onClick={handleScrollToBottom}>
+      <div onClick={handleScrollToBottom} style={{ cursor: 'pointer' }}> {/* Agrega el estilo aquí */}
         <ExpandMoreIcon style={{ fontSize: '50px', color: 'white'}} className="bouncing-arrow" />
       </div>
-      <div onClick={handleScrollToBottom}>
+      <div onClick={handleScrollToBottom} style={{ cursor: 'pointer' }}> {/* Agrega el estilo aquí */}
         <ExpandMoreIcon style={{ fontSize: '80px', color: 'white', marginTop:'-50px' }} className="bouncing-arrow" />
       </div>
     </div>
@@ -23,3 +23,4 @@ const Arrow = () => {
 };
 
 export default Arrow;
+
