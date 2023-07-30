@@ -1,49 +1,70 @@
-import React from 'react';
-import Grid from '@mui/material/Grid'; // Importa el componente Grid de Mui
+import React, { useState } from 'react';
+import Grid from '@mui/material/Grid';
 import backgroundImage from '../assets/IMG/IMG_1936.JPG';
+import Graduate from '../assets/IMG/graduate.jpg';
 
 export default function Cards() {
   const carta1Style = {
-    width: '750px',
+    width: '350px',
     height: '500px',
-    clipPath: 'polygon(25% 0%, 68.1% 0%, 45.1% 100%, 0% 100%)',
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
+    opacity: 1,
+    transition: 'opacity 0.3s ease', // Agrega una transición suave de opacidad
   };
-
+  
   const carta2Style = {
-    width: '750px',
+    width: '350px',
     height: '500px',
-    clipPath: 'polygon(25% 0%, 68.1% 0%, 45.1% 100%, 0% 100%)',
+    backgroundImage: `url(${Graduate})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    opacity: 1,
+    transition: 'opacity 0.3s ease', // Agrega una transición suave de opacidad
+  };
+  
+  const carta3Style = {
+    width: '350px',
+    height: '500px',
     backgroundImage: `url(${backgroundImage})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
+    opacity: 1,
+    transition: 'opacity 0.3s ease', // Agrega una transición suave de opacidad
   };
 
-  const carta3Style = {
-    width: '750px',
-    height: '500px',
-    clipPath: 'polygon(25% 0%, 68.1% 0%, 45.1% 100%, 0% 100%)',
-    backgroundImage: `url(${backgroundImage})`,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-  };
+  // Estado para manejar la opacidad al pasar el mouse
+  const [isHoveringCard1, setIsHoveringCard1] = useState(false);
+  const [isHoveringCard2, setIsHoveringCard2] = useState(false);
+  const [isHoveringCard3, setIsHoveringCard3] = useState(false);
 
   return (
     <div>
-      <Grid container spacing={2}> {/* Utilizamos el componente Grid y asignamos "container" */}
-        <Grid item xs={3.2}>
-          <div style={carta1Style} />
+      <Grid container spacing={2}>
+        <Grid item xs={4}>
+          <div
+            style={{ ...carta1Style, opacity: isHoveringCard1 ? 0.6 : 1 }}
+            onMouseEnter={() => setIsHoveringCard1(true)}
+            onMouseLeave={() => setIsHoveringCard1(false)}
+          />
         </Grid>
-        <Grid item xs={3.2}>
-          <div style={carta2Style} />
+        <Grid item xs={4}>
+          <div
+            style={{ ...carta2Style, opacity: isHoveringCard2 ? 0.6 : 1 }}
+            onMouseEnter={() => setIsHoveringCard2(true)}
+            onMouseLeave={() => setIsHoveringCard2(false)}
+          />
         </Grid>
         <Grid item xs={1}>
-          <div style={carta3Style} />
+          <div
+            style={{ ...carta3Style, opacity: isHoveringCard3 ? 0.6 : 1 }}
+            onMouseEnter={() => setIsHoveringCard3(true)}
+            onMouseLeave={() => setIsHoveringCard3(false)}
+          />
         </Grid>
       </Grid>
     </div>
