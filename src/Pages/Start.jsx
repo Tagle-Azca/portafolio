@@ -44,27 +44,27 @@ class Start extends React.Component {
         return (
             <main style={mainContainerStyle}>
                 <Background />
-                <div className="Iconos" style={iconContainerStyle}>
-                    <AnimatedIcons />
-                </div>
-
-                <div className="Dial" style={Dial}>
-                    <SpeedDial/>
-                </div>
-
-                <div className="Nombre" style={{ ...letrasContainerStyle, marginTop: '20%' }}>
-                    <Letras />
-                </div>
-
-                <div className="Arrow" style={{ marginTop: '15%' }}>
-                    <ArrowDown />
-                </div>
-
-                <div className="CardsSection" style={{ marginTop: '45vh', marginLeft: '11%', position: 'relative' }}>
-                    <div style={{ position: 'absolute', left: 0, right: 0, margin: '0 auto' }}>
-                        <Cards />
+                    <div className="Iconos" style={iconContainerStyle}>
+                        <AnimatedIcons />
                     </div>
-                </div>
+
+                    <div className="Dial" style={Dial}>
+                        <SpeedDial/>
+                    </div>
+
+                    <div className="Nombre" style={{ ...letrasContainerStyle, marginTop: '20%' }}>
+                        <Letras />
+                    </div>
+
+                    <div className="Arrow" style={{ marginTop: '15%' }}>
+                        <ArrowDown />
+                    </div>
+
+                    <div className="CardsSection" style={{ marginTop: '45vh', marginLeft: '11%', position: 'relative' }}>
+                        <div style={{ position: 'absolute', left: 0, right: 0, margin: '0 auto' }}>
+                            <Cards />
+                        </div>
+                    </div>
                 
 
                 {/* Aquí puedes agregar más secciones con contenido e importaciones */}
