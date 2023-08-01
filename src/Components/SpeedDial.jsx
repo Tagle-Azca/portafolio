@@ -22,8 +22,9 @@ const theme = createTheme({
 
 const StyledSpeedDial = styled(SpeedDial)(({ theme }) => ({
   position: 'absolute',
-  bottom: theme.spacing(2),
+  bottom: theme.spacing(4),
   right: theme.spacing(2),
+  transform:'scale(0.8)',
 }));
 
 export default function PlaygroundSpeedDial() {
