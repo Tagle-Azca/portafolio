@@ -39,6 +39,7 @@ const mainContainerStyle = {
 };
 
 
+
 class Start extends React.Component {
     render() {
         return (
@@ -66,8 +67,6 @@ class Start extends React.Component {
                         </div>
                     </div>
                 
-
-                {/* Aquí puedes agregar más secciones con contenido e importaciones */}
             </main>
         );
     }
