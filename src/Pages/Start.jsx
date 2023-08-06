@@ -5,6 +5,8 @@ import Background from '../Components/AnimatedBack';
 import ArrowDown from '../Components/ArrowDown'
 import Cards from '../Components/Cards'
 import SpeedDial from '../Components/SpeedDial'
+import Fotos from '../Components/Fotos'
+
 
 const iconContainerStyle = {
     position: "absolute",
@@ -63,9 +65,10 @@ class Start extends React.Component {
 
                     <div className="CardsSection" style={{ marginTop: '45vh', marginLeft: '11%', position: 'relative' }}>
                         <div style={{ position: 'absolute', left: 0, right: 0, margin: '0 auto' }}>
-                            <Cards />
+                            <Fotos />
                         </div>
                     </div>
+                    
                 
             </main>
         );
