@@ -6,6 +6,7 @@ import ArrowDown from '../Components/ArrowDown'
 import Cards from '../Components/Cards'
 import SpeedDial from '../Components/SpeedDial'
 import Fotos from '../Components/Fotos'
+import Head from "../Components/Head";
 
 
 const iconContainerStyle = {
@@ -50,6 +51,7 @@ class Start extends React.Component {
                     <div className="Iconos" style={iconContainerStyle}>
                         <AnimatedIcons />
                     </div>
+                    
 
                     <div className="Dial" style={Dial}>
                         <SpeedDial/>
@@ -63,10 +65,8 @@ class Start extends React.Component {
                         <ArrowDown />
                     </div>
 
-                    <div className="CardsSection" style={{ marginTop: '45vh', marginLeft: '11%', position: 'relative' }}>
-                        <div style={{ position: 'absolute', left: 0, right: 0, margin: '0 auto' }}>
-                            <Fotos />
-                        </div>
+                    <div className="CardsSection" style={{ marginTop: '10vh', marginLeft: '0%', position: 'relative' }}>
+                        <Head/>
                     </div>
                     
                 

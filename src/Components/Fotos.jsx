@@ -25,14 +25,7 @@ export default function SlidingInterval() {
             alt="..."
             src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
         />
-        <img
-            alt="..."
-            src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
-        />
-        <img
-            alt="..."
-            src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
-        />
+        
         </Carousel>
     )
 }
