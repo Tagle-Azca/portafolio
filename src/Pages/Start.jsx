@@ -7,7 +7,7 @@ import Cards from '../Components/Cards'
 import SpeedDial from '../Components/SpeedDial'
 import Fotos from '../Components/Fotos'
 import Head from "../Components/Head";
-
+import SideBar from '../Components/SideBar';
 
 const iconContainerStyle = {
     position: "absolute",
@@ -19,6 +19,7 @@ const iconContainerStyle = {
     flexDirection: "row",
     alignItems: "center",
 };
+
 const Dial = {
     position: "absolute",
     top: "1%",
@@ -41,36 +42,50 @@ const mainContainerStyle = {
     minHeight: "180vh", // Altura mínima del 100% del viewport
 };
 
-
-
 class Start extends React.Component {
     render() {
         return (
-            <main style={mainContainerStyle}>
-                <Background />
-                    <div className="Iconos" style={iconContainerStyle}>
-                        <AnimatedIcons />
-                    </div>
-                    
+            <div>
+                        <Background style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }} />
+                                    <main style={mainContainerStyle}>
+                                    <div id="inicio" style={{ ...mainContainerStyle, position: 'relative' }}>
+                                    <div style={{ position: 'fixed', top: 0, right: '41%', transform: 'translateX(-50%)', zIndex: 1 }}>
+                                    
+                                    <div className="Iconos" style={iconContainerStyle}>
+                                        <AnimatedIcons />   
+                                    </div>
+                                        
+                                    </div>
+                                    
+                                    {/* Contenedor para el dial */}
+                                    <div style={{ position: 'fixed', top: 0, right: '1%', transform: 'translateX(-50%)', zIndex: 1 }}>
+                                        <div className="Dial" style={Dial}>
+                                            <SpeedDial/>
+                                        </div>
+                                    </div>
+                                    
+                        <Background />
+                        
 
-                    <div className="Dial" style={Dial}>
-                        <SpeedDial/>
+                        <div className="Nombre" style={{ ...letrasContainerStyle, marginTop: '20%' }}>
+                            <Letras />
+                        </div>
+
+                        <div className="Arrow" style={{ marginTop: '15%' }}>
+                            <ArrowDown />
+                        </div>
                     </div>
 
-                    <div className="Nombre" style={{ ...letrasContainerStyle, marginTop: '20%' }}>
-                        <Letras />
+                    <div id="head" style={{ position: 'relative' }}>
+                        <Head />
                     </div>
 
-                    <div className="Arrow" style={{ marginTop: '15%' }}>
-                        <ArrowDown />
+                    {/* Resto del contenido de tu página */}
+                    <div className="CardsSection" style={{ marginTop: '5vh', marginLeft: '0%', position: 'relative' }}>
+                        <Cards />
                     </div>
-
-                    <div className="CardsSection" style={{ marginTop: '10vh', marginLeft: '0%', position: 'relative' }}>
-                        <Head/>
-                    </div>
-                    
-                
-            </main>
+                </main>
+            </div>
         );
     }
 }
