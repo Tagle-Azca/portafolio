@@ -75,12 +75,12 @@ export default function NavBar() {
             edge="start"
             color="inherit"
             aria-label="open drawer"
-            sx={{ position: 'fixed', top: 0, left: 0 }}
+            sx={{ position: 'fixed', top: 0, left: 30 }}
         >
             <div>
             {['left'].map((anchor) => (
                 <React.Fragment key={anchor}>
-                <MenuIcon onClick={toggleDrawer(anchor, true)}>{anchor}</MenuIcon>
+                <MenuIcon onClick={toggleDrawer(anchor, true)} >{anchor}</MenuIcon>
                 <Drawer
                     anchor={anchor}
                     open={state[anchor]}

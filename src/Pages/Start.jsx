@@ -5,7 +5,6 @@ import Background from '../Components/AnimatedBack';
 import ArrowDown from '../Components/ArrowDown'
 import Cards from '../Components/Cards'
 import SpeedDial from '../Components/SpeedDial'
-import Fotos from '../Components/Fotos'
 import Head from "../Components/Head";
 import SideBar from '../Components/SideBar';
 
@@ -46,9 +45,14 @@ class Start extends React.Component {
     render() {
         return (
             <div>
+                <div className="Sidebar" style={{ position: 'fixed', zIndex: 1, color:'#fff' }}>
+                    <SideBar/>
+                </div>
                         <Background style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }} />
                                     <main style={mainContainerStyle}>
-                                    <div id="inicio" style={{ ...mainContainerStyle, position: 'relative' }}>
+                                            
+                                            <div id="inicio" style={{ ...mainContainerStyle, position: 'relative' }}>
+                                    
                                     <div style={{ position: 'fixed', top: 0, right: '41%', transform: 'translateX(-50%)', zIndex: 1 }}>
                                     
                                     <div className="Iconos" style={iconContainerStyle}>

@@ -8,13 +8,13 @@ const AnimatedIcons = () => {
     const styles = useSpring({
         opacity: 1,
         transform: 'translateY(0)', // Animación vertical hacia abajo
-        from: { opacity: 0, transform: 'translateY(-50px)' }, // Animación desde arriba (-50px)
+        from: { opacity: 0, transform: 'translateY(-60px)' }, // Animación desde arriba (-50px)
         config: { tension: 200, friction: 200 },
     });
 
     return (
         <animated.div style={styles}>
-            <div style={{ display: "flex", flexDirection: "row", alignItems: "center" }}>
+            <div style={{ display: "flex", flexDirection: "row", alignItems: "center"}}>
                 <a href="https://www.instagram.com/tagle.26/" target="_blank" rel="noopener noreferrer" style={{ color: "white", margin: "0 10px" }}>
                     <InstagramIcon fontSize="large" />
                 </a>
