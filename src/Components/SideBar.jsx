@@ -40,11 +40,7 @@ export default function NavBar() {
     const items = [
         { text: 'Inicio', icon: <HomeIcon /> },
         { text: 'Nueva Solicitud', icon: <AddBoxIcon /> },
-        { text: 'Solcitudes', icon: <CheckroomIcon /> },
-        { text: 'PYMF', icon: <LocalShippingIcon /> },
-        { text: 'Listas', icon: <ReceiptLongIcon /> },
-        { text: 'Formato 7', icon: <FolderIcon /> },
-        { text: 'Clientes', icon: <GroupIcon /> }
+        
     ];
 
     const list = (anchor) => (
