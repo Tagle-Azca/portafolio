@@ -9,12 +9,10 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import HomeIcon from '@mui/icons-material/Home';
-import AddBoxIcon from '@mui/icons-material/AddBox';
-import CheckroomIcon from '@mui/icons-material/Checkroom';
-import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
-import FolderIcon from '@mui/icons-material/Folder';
-import GroupIcon from '@mui/icons-material/Group';
-import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
+import SchoolIcon from '@mui/icons-material/School';
+import CodeIcon from '@mui/icons-material/Code';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 
 export default function NavBar() {
     const [state, setState] = useState({
@@ -26,7 +24,7 @@ export default function NavBar() {
 
     const toggleDrawer = (anchor, open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-        return;
+            return;
         }
 
         setState({ ...state, [anchor]: open });
@@ -37,24 +35,39 @@ export default function NavBar() {
         window.location.reload();
     };
 
+    const handleMouseEnter = (event) => {
+        event.target.style.transform = 'scale(1.2)'; // Hace más grande al pasar el mouse
+    };
+
+    const handleMouseLeave = (event) => {
+        event.target.style.transform = 'scale(1)'; // Vuelve al tamaño normal al quitar el mouse
+    };
+
     const items = [
-        { text: 'Inicio', icon: <HomeIcon /> },
-        { text: 'Nueva Solicitud', icon: <AddBoxIcon /> },
-        
+        { text: 'Skills', icon: <CodeIcon /> },
+        { text: 'Home', icon: <HomeIcon /> },
+        { text: 'ME', icon: <EmojiPeopleIcon /> },
+        { text: 'School Info', icon: <SchoolIcon /> },
+        { text: 'Hobies', icon: <SportsEsportsIcon /> },
     ];
 
     const list = (anchor) => (
         <div
-        style={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
-        role="presentation"
-        onClick={toggleDrawer(anchor, false)}
-        onKeyDown={toggleDrawer(anchor, false)}
+            className="background" // Asigna la clase CSS al contenedor
+            role="presentation"
+            onClick={toggleDrawer(anchor, false)}
+            onKeyDown={toggleDrawer(anchor, false)}
+            style={{ width: '300px' }} // Ajusta el ancho del contenedor
         >
         <List>
             {items.map(({ text, icon }) => (
             <ListItem key={text} disablePadding>
-                <ListItemButton>
-                <ListItemIcon>{icon}</ListItemIcon>
+                <ListItemButton
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                    style={{ fontSize: '16px'}} // Ajusta el tamaño de fuente
+                >
+                <ListItemIcon style={{color:'#fff'}}>{icon}</ListItemIcon>
                 <ListItemText primary={text} />
                 </ListItemButton>
             </ListItem>
