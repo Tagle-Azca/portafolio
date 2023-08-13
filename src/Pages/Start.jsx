@@ -45,7 +45,7 @@ class Start extends React.Component {
     render() {
         return (
             <div>
-                <div className="Sidebar" style={{ position: 'fixed', zIndex: 1, color:'#fff' }}>
+                <div className="Sidebar" style={{ position: 'fixed', zIndex: 1, color:'#fff', top:'10' }}>
                     <SideBar/>
                 </div>
                         <Background style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }} />
@@ -53,7 +53,7 @@ class Start extends React.Component {
                                             
                                             <div id="inicio" style={{ ...mainContainerStyle, position: 'relative' }}>
                                     
-                                    <div style={{ position: 'fixed', top: 0, right: '41%', transform: 'translateX(-50%)', zIndex: 1 }}>
+                                    <div style={{ position: 'fixed', top: 10, right: '41%', transform: 'translateX(-50%)', zIndex: 1 }}>
                                     
                                     <div className="Iconos" style={iconContainerStyle}>
                                         <AnimatedIcons />   

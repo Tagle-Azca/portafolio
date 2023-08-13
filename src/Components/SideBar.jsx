@@ -24,7 +24,7 @@ export default function NavBar() {
 
     const toggleDrawer = (anchor, open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-            return;
+        return;
         }
 
         setState({ ...state, [anchor]: open });
@@ -35,45 +35,44 @@ export default function NavBar() {
         window.location.reload();
     };
 
-    const handleMouseEnter = (event) => {
-        event.target.style.transform = 'scale(1.2)'; // Hace más grande al pasar el mouse
-    };
-
-    const handleMouseLeave = (event) => {
-        event.target.style.transform = 'scale(1)'; // Vuelve al tamaño normal al quitar el mouse
-    };
+    
 
     const items = [
-        { text: 'Skills', icon: <CodeIcon /> },
-        { text: 'Home', icon: <HomeIcon /> },
-        { text: 'ME', icon: <EmojiPeopleIcon /> },
-        { text: 'School Info', icon: <SchoolIcon /> },
-        { text: 'Hobies', icon: <SportsEsportsIcon /> },
+        { text: 'HOME', icon: <HomeIcon /> },
+        { text: 'SKILLS', icon: <CodeIcon /> },
+        { text: 'ABOUT ME', icon: <EmojiPeopleIcon /> },
+        { text: 'SCHOOL INFO', icon: <SchoolIcon /> },
+        { text: 'HOOBBIES', icon: <SportsEsportsIcon /> },
     ];
 
     const list = (anchor) => (
         <div
-            className="background" // Asigna la clase CSS al contenedor
+            style={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
             role="presentation"
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
-            style={{ width: '300px' }} // Ajusta el ancho del contenedor
         >
-        <List>
-            {items.map(({ text, icon }) => (
-            <ListItem key={text} disablePadding>
-                <ListItemButton
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                    style={{ fontSize: '16px'}} // Ajusta el tamaño de fuente
-                >
-                <ListItemIcon style={{color:'#fff'}}>{icon}</ListItemIcon>
-                <ListItemText primary={text} />
-                </ListItemButton>
-            </ListItem>
-            ))}
-        </List>
-        <Divider />
+            <List>
+                {items.map(({ text, icon }) => (
+                    <ListItem key={text} disablePadding>
+                        <ListItemButton
+                            onMouseEnter={(e) => {
+                                e.target.style.transform = 'scale(1.1)'; 
+                                e.target.style.color = '#3498DB'; 
+                            }}
+                            onMouseLeave={(e) => {
+                                e.target.style.transform = 'scale(1)'; 
+                                e.target.style.color = 'grey'; 
+                            }}
+                            style={{ transition: 'transform 0.1s, color 0.1s', color: 'grey' }}
+                        >
+                            <ListItemIcon>{icon}</ListItemIcon>
+                            <ListItemText primary={text} />
+                        </ListItemButton>
+                    </ListItem>
+                ))}
+            </List>
+            <Divider />
         </div>
     );
 
