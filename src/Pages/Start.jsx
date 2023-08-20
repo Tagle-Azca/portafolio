@@ -37,7 +37,7 @@ const letrasContainerStyle = {
 };
 
 const mainContainerStyle = {
-    minHeight: "100vh", // Altura mínima del 100% del viewport
+    minHeight: "100vh", //min height of container
 };
 
 class Start extends React.Component {
@@ -50,15 +50,13 @@ class Start extends React.Component {
                 <main style={mainContainerStyle}>
                 <Background style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }} />
                     
-                        <div id="inicio" style={{ ...mainContainerStyle, position: 'relative' }}>
+                        <div1 id="inicio" style={{ ...mainContainerStyle, position: 'relative' }}>
                             <div style={{ position: 'fixed', top: 10, right: '41%', transform: 'translateX(-50%)', zIndex: 1 }}>
                                 <div className="Iconos" style={iconContainerStyle}>
                                     <AnimatedIcons />   
                                 </div>
                             </div>
-                                    
-                            {/* Contenedor para el dial */}
-                            <div style={{ position: 'fixed', top: 0, right: '1%', transform: 'translateX(-50%)', zIndex: 1 }}>
+                            <div className="DialDIV" style={{ position: 'fixed', top: 0, right: '1%', transform: 'translateX(-50%)', zIndex: 1 }}>
                                 <div className="Dial" style={Dial}>
                                     <SpeedDial/>
                                 </div>
@@ -67,16 +65,14 @@ class Start extends React.Component {
                 <Background />
                         
 
-                        <div className="Nombre" style={{ ...letrasContainerStyle, marginTop: '20%' }}>
+                        <div className="Nombre" style={{  ...letrasContainerStyle, marginTop: '20%' }}>
                             <Letras />
                         </div>
-
                         <div className="Arrow" style={{ marginTop: '15%' }}>
                             <ArrowDown />
                         </div>
-                    </div>
-
-                    <div id="head" style={{ position: 'relative' }}>
+                    </div1>
+                    <div className="head" style={{ position: 'absolute' }}>
                         <Head />
                     </div>
                 </main>
@@ -86,7 +82,3 @@ class Start extends React.Component {
 }
 
 export default Start;
-
-
-
-
